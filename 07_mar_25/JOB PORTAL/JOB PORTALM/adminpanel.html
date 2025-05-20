@@ -1,0 +1,187 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Area - New Job</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+    body {
+      font-family: 'Roboto Slab', serif;
+    }
+  </style>
+</head>
+<body class="bg-white min-h-screen flex">
+  <!-- Sidebar -->
+  <aside class="bg-purple-700 w-56 min-h-screen flex flex-col text-white select-none">
+    <div class="px-6 py-4 text-xs italic font-semibold tracking-wide">Admin Area</div>
+    <nav class="flex flex-col space-y-2 px-4">
+      <a href="#" class="flex items-center space-x-3 py-3 px-3 rounded hover:bg-purple-600 cursor-pointer">
+        <i class="fas fa-user-circle text-lg"></i>
+        <span class="text-sm font-normal">Dashboard</span>
+      </a>
+      <a href="#" class="flex items-center space-x-3 py-3 px-3 rounded bg-purple-900 cursor-pointer">
+        <i class="fas fa-plus-square text-lg"></i>
+        <span class="text-sm font-normal">New Job</span>
+      </a>
+      <a href="#" class="flex items-center space-x-3 py-3 px-3 rounded hover:bg-purple-600 cursor-pointer">
+        <i class="fas fa-file-alt text-sm"></i>
+        <span class="text-sm font-normal">Job List</span>
+      </a>
+      <a href="#" class="flex items-center space-x-3 py-3 px-3 rounded hover:bg-purple-600 cursor-pointer">
+        <i class="fas fa-file-signature text-sm"></i>
+        <span class="text-sm font-normal">View Resume</span>
+      </a>
+      <a href="#" class="flex items-center space-x-3 py-3 px-3 rounded hover:bg-purple-600 cursor-pointer">
+        <i class="fas fa-comments text-sm"></i>
+        <span class="text-sm font-normal">Contact List</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="flex-1 p-8 overflow-auto">
+    <form class="max-w-5xl mx-auto space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Specialization Required -->
+        <div>
+          <label for="specialization" class="block text-xs font-semibold text-gray-900 mb-1">Specialization Required</label>
+          <div class="relative">
+            <input
+              id="specialization"
+              type="text"
+              value="dthrt"
+              class="w-full border border-red-500 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-red-500"
+              aria-invalid="true"
+              aria-describedby="specialization-error"
+            />
+            <span
+              class="absolute right-3 top-1/2 -translate-y-1/2 text-red-600 text-xs font-bold bg-white rounded-full w-5 h-5 flex items-center justify-center"
+              >1</span
+            >
+          </div>
+        </div>
+
+        <!-- Last Date To Apply -->
+        <div>
+          <label for="lastDate" class="block text-xs font-semibold text-gray-900 mb-1">Last Date To Apply</label>
+          <div class="relative">
+            <input
+              id="lastDate"
+              type="date"
+              value="2021-10-10"
+              class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
+            />
+            <i class="fas fa-calendar-alt absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+          </div>
+        </div>
+
+        <!-- Salary -->
+        <div>
+          <label for="salary" class="block text-xs font-semibold text-gray-900 mb-1">Salary</label>
+          <input
+            id="salary"
+            type="text"
+            value="12000 / month"
+            class="w-full bg-blue-100 border border-blue-300 rounded px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-1 focus:ring-blue-400"
+          />
+        </div>
+
+        <!-- Job Type -->
+        <div>
+          <label for="jobType" class="block text-xs font-semibold text-gray-900 mb-1">Job Type</label>
+          <select
+            id="jobType"
+            class="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400"
+          >
+            <option selected>Full Time</option>
+            <option>Part Time</option>
+            <option>Contract</option>
+          </select>
+        </div>
+
+        <!-- Company/Organisation Name -->
+        <div>
+          <label for="companyName" class="block text-xs font-semibold text-gray-900 mb-1">Company/Organisation Name</label>
+          <input
+            id="companyName"
+            type="text"
+            value="Test company"
+            class="w-full bg-blue-100 border border-blue-300 rounded px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-1 focus:ring-blue-400"
+          />
+        </div>
+
+        <!-- Company/Organisation Logo -->
+        <div>
+          <label for="companyLogo" class="block text-xs font-semibold text-gray-900 mb-1">Company/Organisation Logo</label>
+          <input
+            id="companyLogo"
+            type="file"
+            class="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-600 cursor-pointer"
+          />
+          <span class="text-xs text-gray-500 ml-2">Certificate of .Net Course.pdf</span>
+        </div>
+
+        <!-- Website -->
+        <div>
+          <label for="website" class="block text-xs font-semibold text-gray-900 mb-1">Website</label>
+          <input
+            id="website"
+            type="text"
+            placeholder="Enter Website"
+            class="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-xs font-semibold text-gray-900 mb-1">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Enter Email"
+            class="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400"
+          />
+        </div>
+
+        <!-- Address -->
+        <div class="md:col-span-2">
+          <label for="address" class="block text-xs font-semibold text-gray-900 mb-1">Address</label>
+          <textarea
+            id="address"
+            placeholder="Enter Work Location"
+            class="w-full border border-blue-300 rounded px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-1 focus:ring-blue-400 resize-none"
+            rows="3"
+          ></textarea>
+          <div class="mt-1 text-xs text-gray-700 border border-gray-300 rounded p-2 max-w-lg">
+            <p class="font-semibold">C.P. Talka, Rd No.27, Behind Sion Garage, Near Shiv Temple, Wagle Estate</p>
+            <p>Maharashtra</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-lg">
+        <button
+          type="button"
+          class="border border-gray-300 rounded px-3 py-1 text-xs text-gray-600 hover:bg-gray-100"
+        >
+          Manage addresses...
+        </button>
+        <select
+          class="border border-gray-300 rounded px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-1 focus:ring-gray-400"
+        >
+          <option></option>
+        </select>
+        <input
+          type="text"
+          placeholder="Enter State"
+          class="border border-gray-300 rounded px-3 py-2 text-sm text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400"
+        />
+      </div>
+    </form>
+  </main>
+</body>
+</html>

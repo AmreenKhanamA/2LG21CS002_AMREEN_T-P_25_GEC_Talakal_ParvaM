@@ -26,6 +26,7 @@ public class AmreenEmployeeController {
         return "employee/index";
     }
 
+
     @GetMapping("/create")
     public String create(Model model) {
         model.addAttribute("employee", new Employee());
